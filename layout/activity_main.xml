@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/layout1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+    <LinearLayout
+            android:id="@+id/header"
+            android:layout_width="fill_parent"
+            android:layout_height="80dp"
+            android:layout_alignParentTop="true"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+        <Button
+                android:id="@+id/TakePhoto"
+                android:layout_width="200dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="Take Photo"/>
+
+        <Button
+                android:id="@+id/Delete_Photos"
+                android:layout_width="200dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="Delete File"/>
+    </LinearLayout>
+    <ScrollView
+            android:id="@+id/SCROLLER_ID"
+            android:layout_width="match_parent"
+            android:layout_height="500dp"
+            android:scrollbars="vertical"
+            android:fillViewport="true"
+            android:layout_below="@id/header">
+        <TextView
+                android:id="@+id/text_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="THIS APP TAKES PHOTOS
+                                          1-First enter ip and port.
+                                                2-Press Connect to link with server
+                                                3-Send a 1 from the server and photo is sent
+                                                5-Send a 2 from the server and photo is taken
+                                                5-Send a 3 and photos are erased"
+                android:textSize="24sp"
+                android:textColor="#0000FF"
+                android:textIsSelectable="true" />
+    </ScrollView>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/input"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:orientation="horizontal"
+            android:layout_below="@+id/SCROLLER_ID"
+            android:gravity="center">
+        <EditText
+                android:id="@+id/ip"
+                android:layout_width="200dp"
+                android:layout_height="match_parent"
+                android:hint="ip: "
+                android:inputType="textMultiLine"/>
+        <EditText
+                android:id="@+id/port"
+                android:layout_width="200dp"
+                android:layout_height="match_parent"
+                android:hint="port: " />
+    </LinearLayout>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/buttons"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:orientation="horizontal"
+            android:layout_below="@+id/input"
+            android:gravity="center">
+        <Button
+                android:id="@+id/sendButton"
+                android:layout_width="200dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="Send" />
+        <Button
+                android:id="@+id/connectButton"
+                android:layout_width="200dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="Connect" />
+    </LinearLayout>
+
+</RelativeLayout>
